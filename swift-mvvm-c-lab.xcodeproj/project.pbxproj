@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042F5CE5280D12DB00BDD443 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F5CE4280D12DB00BDD443 /* Alert.swift */; };
+		042F5CEA280D150000BDD443 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042F5CE9280D14FF00BDD443 /* GoogleService-Info.plist */; };
+		042F5CEF280D1B1E00BDD443 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F5CEE280D1B1D00BDD443 /* FirebaseService.swift */; };
 		0437747E2807371700C74366 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437747D2807371700C74366 /* Constants.swift */; };
 		04377483280738B500C74366 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04377482280738B500C74366 /* LoginViewModel.swift */; };
 		0437748C280738D500C74366 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437748B280738D500C74366 /* LoginCoordinator.swift */; };
@@ -100,6 +103,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042F5CE4280D12DB00BDD443 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		042F5CE9280D14FF00BDD443 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		042F5CEE280D1B1D00BDD443 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0437747D2807371700C74366 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04377482280738B500C74366 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		0437748B280738D500C74366 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
@@ -315,6 +321,7 @@
 		04C73C3F280667E200323F09 /* swift-mvvm-c-lab */ = {
 			isa = PBXGroup;
 			children = (
+				042F5CE9280D14FF00BDD443 /* GoogleService-Info.plist */,
 				04F97FC7280774A500C38845 /* translations.json */,
 				04C73C49280667E600323F09 /* Assets.xcassets */,
 				04C73C40280667E200323F09 /* AppDelegate.swift */,
@@ -401,6 +408,7 @@
 			isa = PBXGroup;
 			children = (
 				0437749D280749FE00C74366 /* AlertDispatcher.swift */,
+				042F5CEE280D1B1D00BDD443 /* FirebaseService.swift */,
 				04C73D132806811600323F09 /* SessionService.swift */,
 				0437750C28076B5400C74366 /* TranslationService.swift */,
 				04F97FD7280890F700C38845 /* UserDataManager.swift */,
@@ -431,6 +439,7 @@
 				04737A0B2808B61A00206D7B /* DelegateView.swift */,
 				04737A102808C93E00206D7B /* Validator.swift */,
 				04737A1D2808C9C700206D7B /* ValidationRules.swift */,
+				042F5CE4280D12DB00BDD443 /* Alert.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -613,6 +622,7 @@
 				04C73C4A280667E600323F09 /* Assets.xcassets in Resources */,
 				04C73CD92806719700323F09 /* Home.storyboard in Resources */,
 				043774962807392A00C74366 /* Login.storyboard in Resources */,
+				042F5CEA280D150000BDD443 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +780,7 @@
 				0437756328076E3F00C74366 /* TranslationsResponse.swift in Sources */,
 				04C73D0328067D1700323F09 /* Container+RegisterDependencies.swift in Sources */,
 				0437749E280749FE00C74366 /* AlertDispatcher.swift in Sources */,
+				042F5CE5280D12DB00BDD443 /* Alert.swift in Sources */,
 				04737A112808C93E00206D7B /* Validator.swift in Sources */,
 				043774AB28074AF600C74366 /* UIViewControllerExtensions.swift in Sources */,
 				04C73CB928066B5100323F09 /* AppCoordinator.swift in Sources */,
@@ -785,6 +796,7 @@
 				0437750D28076B5400C74366 /* TranslationService.swift in Sources */,
 				0437758A2807707E00C74366 /* Encodable+Json.swift in Sources */,
 				0437757B28076F4000C74366 /* SettingKey.swift in Sources */,
+				042F5CEF280D1B1E00BDD443 /* FirebaseService.swift in Sources */,
 				0437752128076C3200C74366 /* ApiRequest.swift in Sources */,
 				04377483280738B500C74366 /* LoginViewModel.swift in Sources */,
 				0437754928076DBB00C74366 /* SignInRequest.swift in Sources */,

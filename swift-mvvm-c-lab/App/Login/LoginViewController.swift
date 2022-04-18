@@ -24,7 +24,12 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func loginAction(_ sender: Any) {
-        viewModel?.didTapLogin.accept?(())
+        viewModel?.doLogin(email: self.email.text!, password: self.password.text!, completion: { (success) in
+            if(!success) {
+                let alert = Alert(titulo: "Falha ao autenticar", mensagem: "Falha ao realizar a autenticação, por favor, tente novamente.")
+                self.present(alert.getAlert(), animated: true, completion: nil)
+            }
+        })
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {

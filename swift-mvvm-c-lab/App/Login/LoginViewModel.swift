@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import FirebaseAuth
 
 class LoginViewModel {
     private let sessionService: SessionService
@@ -16,5 +17,27 @@ class LoginViewModel {
     
     init(sessionService: SessionService) {
         self.sessionService = sessionService
+    }
+    
+    public func doLogin(email: String, password: String, completion: @escaping (_ success: Bool) -> Void) {
+        
+        // Firebase auth
+        let firebaseService = FirebaseService()
+        firebaseService.autenticate(email: email, password: password, completion: { (user, error) in
+            if error == nil {
+                if user == nil {
+                    print("USER Login Error")
+                    completion(false)
+                } else {
+                    completion(true)
+                    print("USER Login Success \(String(describing: user?.user.uid))")
+                    self.didTapLogin.accept?(())
+                }
+            } else {
+                completion(false)
+            }
+            
+        })
+            
     }
 }

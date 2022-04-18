@@ -7,6 +7,7 @@
 
 import UIKit
 import Swinject
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let container = Container()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FirebaseApp.configure()
+        
         Container.loggingFunction = nil
         AppDelegate.container.registerDependencies()
         appCoordinator = AppDelegate.container.resolve(AppCoordinator.self)!
