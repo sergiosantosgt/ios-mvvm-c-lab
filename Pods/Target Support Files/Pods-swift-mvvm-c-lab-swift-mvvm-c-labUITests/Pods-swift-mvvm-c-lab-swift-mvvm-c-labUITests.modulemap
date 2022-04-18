@@ -1,0 +1,6 @@
+framework module Pods_swift_mvvm_c_lab_swift_mvvm_c_labUITests {
+  umbrella header "Pods-swift-mvvm-c-lab-swift-mvvm-c-labUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
