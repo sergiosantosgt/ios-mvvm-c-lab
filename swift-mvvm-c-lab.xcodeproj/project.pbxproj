@@ -182,8 +182,8 @@
 		04C73D0928067D5600323F09 /* Container+Coordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Coordinators.swift"; sourceTree = "<group>"; };
 		04C73D0E28067E4200323F09 /* Container+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Services.swift"; sourceTree = "<group>"; };
 		04C73D132806811600323F09 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
-		04EFEBFF281335F7001DC7B5 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = translations.json; path = ../../../../../.Trash/translations.json; sourceTree = "<group>"; };
-		04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04EFEBFF281335F7001DC7B5 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = translations.json; sourceTree = "<group>"; };
+		04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04F97FCF28088ED000C38845 /* HttpClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
 		04F97FD7280890F700C38845 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		0E00020CEA44E2FBCBF42D5C /* Pods-swift-mvvm-c-lab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-mvvm-c-lab.release.xcconfig"; path = "Target Support Files/Pods-swift-mvvm-c-lab/Pods-swift-mvvm-c-lab.release.xcconfig"; sourceTree = "<group>"; };
