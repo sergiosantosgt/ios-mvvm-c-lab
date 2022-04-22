@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		042F5CE5280D12DB00BDD443 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F5CE4280D12DB00BDD443 /* Alert.swift */; };
-		042F5CEA280D150000BDD443 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 042F5CE9280D14FF00BDD443 /* GoogleService-Info.plist */; };
 		042F5CEF280D1B1E00BDD443 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042F5CEE280D1B1D00BDD443 /* FirebaseService.swift */; };
 		0437747E2807371700C74366 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437747D2807371700C74366 /* Constants.swift */; };
 		04377483280738B500C74366 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04377482280738B500C74366 /* LoginViewModel.swift */; };
@@ -32,7 +31,6 @@
 		0437750328076A5900C74366 /* String+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437750228076A5900C74366 /* String+Localization.swift */; };
 		0437750828076B1500C74366 /* LocalizationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437750728076B1500C74366 /* LocalizationUtils.swift */; };
 		0437750D28076B5400C74366 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437750C28076B5400C74366 /* TranslationService.swift */; };
-		0437751228076B6D00C74366 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 0437751128076B6D00C74366 /* translations.json */; };
 		0437751728076B9400C74366 /* FileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437751628076B9400C74366 /* FileUtils.swift */; };
 		0437751C28076BE100C74366 /* BackendRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437751B28076BE100C74366 /* BackendRestClient.swift */; };
 		0437752128076C3200C74366 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0437752028076C3200C74366 /* ApiRequest.swift */; };
@@ -78,6 +76,12 @@
 		04C73D0A28067D5600323F09 /* Container+Coordinators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C73D0928067D5600323F09 /* Container+Coordinators.swift */; };
 		04C73D0F28067E4200323F09 /* Container+Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C73D0E28067E4200323F09 /* Container+Services.swift */; };
 		04C73D142806811600323F09 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C73D132806811600323F09 /* SessionService.swift */; };
+		04EFEC00281335F7001DC7B5 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFEBFF281335F7001DC7B5 /* translations.json */; };
+		04EFEC01281335F7001DC7B5 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFEBFF281335F7001DC7B5 /* translations.json */; };
+		04EFEC02281335F7001DC7B5 /* translations.json in Resources */ = {isa = PBXBuildFile; fileRef = 04EFEBFF281335F7001DC7B5 /* translations.json */; };
+		04EFEC0A28133640001DC7B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */; };
+		04EFEC0B28133640001DC7B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */; };
+		04EFEC0C28133640001DC7B5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */; };
 		04F97FD028088ED000C38845 /* HttpClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F97FCF28088ED000C38845 /* HttpClientMock.swift */; };
 		04F97FD8280890F700C38845 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F97FD7280890F700C38845 /* UserDataManager.swift */; };
 		37078F0741B4BFAF251E51B6 /* Pods_swift_mvvm_c_lab_swift_mvvm_c_labUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3970F4830CB91D99E3FC5224 /* Pods_swift_mvvm_c_lab_swift_mvvm_c_labUITests.framework */; };
@@ -104,7 +108,6 @@
 
 /* Begin PBXFileReference section */
 		042F5CE4280D12DB00BDD443 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		042F5CE9280D14FF00BDD443 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		042F5CEE280D1B1D00BDD443 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		0437747D2807371700C74366 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04377482280738B500C74366 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -128,7 +131,6 @@
 		0437750228076A5900C74366 /* String+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Localization.swift"; sourceTree = "<group>"; };
 		0437750728076B1500C74366 /* LocalizationUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUtils.swift; sourceTree = "<group>"; };
 		0437750C28076B5400C74366 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
-		0437751128076B6D00C74366 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = translations.json; path = "../Swift-MVVMC-Demo/MVVMC/translations.json"; sourceTree = "<group>"; };
 		0437751628076B9400C74366 /* FileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileUtils.swift; sourceTree = "<group>"; };
 		0437751B28076BE100C74366 /* BackendRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendRestClient.swift; sourceTree = "<group>"; };
 		0437752028076C3200C74366 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
@@ -180,7 +182,8 @@
 		04C73D0928067D5600323F09 /* Container+Coordinators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Coordinators.swift"; sourceTree = "<group>"; };
 		04C73D0E28067E4200323F09 /* Container+Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Services.swift"; sourceTree = "<group>"; };
 		04C73D132806811600323F09 /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
-		04F97FC7280774A500C38845 /* translations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = translations.json; path = "../../Swift-MVVMC-Demo/MVVMC/translations.json"; sourceTree = "<group>"; };
+		04EFEBFF281335F7001DC7B5 /* translations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = translations.json; path = ../../../../../.Trash/translations.json; sourceTree = "<group>"; };
+		04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04F97FCF28088ED000C38845 /* HttpClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientMock.swift; sourceTree = "<group>"; };
 		04F97FD7280890F700C38845 /* UserDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		0E00020CEA44E2FBCBF42D5C /* Pods-swift-mvvm-c-lab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-mvvm-c-lab.release.xcconfig"; path = "Target Support Files/Pods-swift-mvvm-c-lab/Pods-swift-mvvm-c-lab.release.xcconfig"; sourceTree = "<group>"; };
@@ -299,7 +302,6 @@
 			isa = PBXGroup;
 			children = (
 				04C73C3F280667E200323F09 /* swift-mvvm-c-lab */,
-				0437751128076B6D00C74366 /* translations.json */,
 				04C73C56280667E600323F09 /* swift-mvvm-c-labTests */,
 				04C73C61280667E700323F09 /* swift-mvvm-c-labUITests */,
 				04C73C3E280667E200323F09 /* Products */,
@@ -321,8 +323,8 @@
 		04C73C3F280667E200323F09 /* swift-mvvm-c-lab */ = {
 			isa = PBXGroup;
 			children = (
-				042F5CE9280D14FF00BDD443 /* GoogleService-Info.plist */,
-				04F97FC7280774A500C38845 /* translations.json */,
+				04EFEC0928133640001DC7B5 /* GoogleService-Info.plist */,
+				04EFEBFF281335F7001DC7B5 /* translations.json */,
 				04C73C49280667E600323F09 /* Assets.xcassets */,
 				04C73C40280667E200323F09 /* AppDelegate.swift */,
 				04C73C4E280667E600323F09 /* Info.plist */,
@@ -618,11 +620,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C73C4D280667E600323F09 /* LaunchScreen.storyboard in Resources */,
-				0437751228076B6D00C74366 /* translations.json in Resources */,
+				04EFEC00281335F7001DC7B5 /* translations.json in Resources */,
 				04C73C4A280667E600323F09 /* Assets.xcassets in Resources */,
 				04C73CD92806719700323F09 /* Home.storyboard in Resources */,
 				043774962807392A00C74366 /* Login.storyboard in Resources */,
-				042F5CEA280D150000BDD443 /* GoogleService-Info.plist in Resources */,
+				04EFEC0A28133640001DC7B5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +632,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EFEC01281335F7001DC7B5 /* translations.json in Resources */,
+				04EFEC0B28133640001DC7B5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +641,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EFEC02281335F7001DC7B5 /* translations.json in Resources */,
+				04EFEC0C28133640001DC7B5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
