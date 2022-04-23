@@ -14,6 +14,7 @@ class LoginViewModel {
     private let disposeBag = DisposeBag()
     
     let didTapLogin = DelegateView<Void>()
+    let didTapRegister = DelegateView<Void>()
     
     init(sessionService: SessionService) {
         self.sessionService = sessionService
@@ -39,5 +40,9 @@ class LoginViewModel {
             
         })
             
+    }
+    
+    public func doRegister() {
+        self.didTapRegister.accept?(())
     }
 }

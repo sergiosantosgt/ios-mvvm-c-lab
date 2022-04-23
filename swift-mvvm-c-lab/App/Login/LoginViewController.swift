@@ -24,12 +24,24 @@ class LoginViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        
+        updateLoginFormState(onLoginState: false)
+        
         viewModel?.doLogin(email: self.email.text!, password: self.password.text!, completion: { (success) in
             if(!success) {
-                let alert = Alert(titulo: "Falha ao autenticar", mensagem: "Falha ao realizar a autenticação, por favor, tente novamente.")
+                let alert = Alert(title: Constants.authFailTitle, message: Constants.authFailMsg, action: Constants.cancelMsg)
                 self.present(alert.getAlert(), animated: true, completion: nil)
             }
+            
+            self.updateLoginFormState(onLoginState: true)
+            
         })
+    }
+    
+    @IBAction func registerAction(_ sender: Any) {
+        
+        viewModel?.doRegister()
+        
     }
     
     @IBAction func textFieldChanged(_ sender: Any) {
@@ -43,6 +55,18 @@ class LoginViewController: UIViewController, Storyboarded {
             loginButton.isEnabled = true
         } else {
             loginButton.isEnabled = false
+        }
+    }
+    
+    private func updateLoginFormState(onLoginState: Bool) {
+        if onLoginState {
+            self.email.isEnabled = true
+            self.password.isEnabled = true
+            self.loginButton.isInProgress = false
+        } else {
+            self.email.isEnabled = false
+            self.password.isEnabled = false
+            self.loginButton.isInProgress = true
         }
     }
 

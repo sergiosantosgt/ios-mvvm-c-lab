@@ -12,5 +12,6 @@ extension Container {
         autoregister(AppCoordinator.self, initializer: AppCoordinator.init)
         autoregister(HomeCoordinator.self, initializer: HomeCoordinator.init)
         autoregister(LoginCoordinator.self, initializer: LoginCoordinator.init)
+        autoregister(RegisterCoordinator.self, initializer: RegisterCoordinator.init)
     }
 }

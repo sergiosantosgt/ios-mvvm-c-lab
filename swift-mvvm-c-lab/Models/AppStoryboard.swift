@@ -10,4 +10,5 @@ import Foundation
 enum AppStoryboard: String {
     case home = "Home"
     case login = "Login"
+    case register = "Register"
 }

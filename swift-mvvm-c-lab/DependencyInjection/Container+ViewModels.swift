@@ -13,6 +13,7 @@ extension Container {
     func registerViewModels() {
         autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
         autoregister(LoginViewModel.self, initializer: LoginViewModel.init)
+        autoregister(RegisterViewModel.self, initializer: RegisterViewModel.init)
     }
 }
 

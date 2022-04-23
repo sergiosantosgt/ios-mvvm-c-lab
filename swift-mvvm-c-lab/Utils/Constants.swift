@@ -9,5 +9,11 @@ import Foundation
 import UIKit
 
 enum Constants {
+    // MARK: - Colors
     static let mainColor = UIColor(red: 0x71 / 0xFF, green: 0xBC / 0xFF, blue: 0xBD / 0xFF, alpha: 1)
+    
+    // MARK: - Messages
+    static let authFailTitle: String = "Falha ao autenticar"
+    static let authFailMsg: String = "Falha ao realizar a autenticação, por favor, tente novamente."
+    static let cancelMsg: String = "Cancelar"
 }

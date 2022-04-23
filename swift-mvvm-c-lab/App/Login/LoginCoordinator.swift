@@ -26,6 +26,10 @@ class LoginCoordinator: BaseCoordinator {
         viewModel.didTapLogin.subscribe(to: self) { this, _ in
             this.showHome()
         }
+        
+        viewModel.didTapRegister.subscribe(to: self) { this, _ in
+            this.showRegister()
+        }
     }
     
     private func showHome() {
@@ -33,6 +37,15 @@ class LoginCoordinator: BaseCoordinator {
         
         removeChildCoordinators()
         let coordinator = AppDelegate.container.resolve(HomeCoordinator.self)!
+        coordinator.navigationController = navigationController
+        start(coordinator: coordinator)
+    }
+    
+    private func showRegister() {
+        Logger.info("Register Screen")
+        
+        removeChildCoordinators()
+        let coordinator = AppDelegate.container.resolve(RegisterCoordinator.self)!
         coordinator.navigationController = navigationController
         start(coordinator: coordinator)
     }

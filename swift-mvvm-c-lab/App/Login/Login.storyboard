@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,9 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaG-mJ-fiy" customClass="ButtonWithProgress" customModule="swift_mvvm_c_lab" customModuleProvider="target">
-                                <rect key="frame" x="142" y="505" width="130" height="40"/>
+                                <rect key="frame" x="117" y="505" width="180" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3zr-8B-dzd"/>
+                                    <constraint firstAttribute="height" constant="40" id="IhI-Zd-QwM"/>
+                                </constraints>
                                 <color key="tintColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="9" maxX="40" maxY="9"/>
                                 <state key="normal" title="SignIn">
@@ -63,6 +68,27 @@
                                     <action selector="textFieldChanged:" destination="S8A-py-EGt" eventType="editingChanged" id="c6i-bK-yAu"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YR-Ay-kKb" customClass="ButtonWithProgress" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="117" y="565" width="180" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="g67-eR-a4h"/>
+                                    <constraint firstAttribute="width" constant="180" id="j95-mG-nwg"/>
+                                </constraints>
+                                <color key="tintColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="9" maxX="40" maxY="9"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="Register"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="upperText" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerAction:" destination="S8A-py-EGt" eventType="touchUpInside" id="ckI-ko-Pww"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gsK-gW-6AP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -75,8 +101,10 @@
                             <constraint firstItem="iaG-mJ-fiy" firstAttribute="top" secondItem="Y8d-VQ-dtq" secondAttribute="bottom" constant="40" id="Tx6-8X-otZ"/>
                             <constraint firstItem="Y8d-VQ-dtq" firstAttribute="leading" secondItem="gsK-gW-6AP" secondAttribute="leading" constant="60" id="bh4-dh-0FG"/>
                             <constraint firstItem="gsK-gW-6AP" firstAttribute="trailing" secondItem="u9m-yM-hv7" secondAttribute="trailing" constant="60" id="ct0-ku-ZcL"/>
+                            <constraint firstItem="0YR-Ay-kKb" firstAttribute="top" secondItem="iaG-mJ-fiy" secondAttribute="bottom" constant="20" id="dWU-wO-vgT"/>
                             <constraint firstItem="SDU-WH-ZCs" firstAttribute="leading" secondItem="gsK-gW-6AP" secondAttribute="leading" constant="143" id="jjS-H6-uK5"/>
                             <constraint firstItem="Y8d-VQ-dtq" firstAttribute="top" secondItem="u9m-yM-hv7" secondAttribute="bottom" constant="25" id="mOE-2K-QfS"/>
+                            <constraint firstItem="0YR-Ay-kKb" firstAttribute="centerX" secondItem="xJB-re-6eH" secondAttribute="centerX" id="sJN-AP-8DA"/>
                             <constraint firstItem="u9m-yM-hv7" firstAttribute="top" secondItem="SDU-WH-ZCs" secondAttribute="bottom" constant="60" id="vaZ-aK-oil"/>
                             <constraint firstItem="gsK-gW-6AP" firstAttribute="trailing" secondItem="Y8d-VQ-dtq" secondAttribute="trailing" constant="60" id="zkb-wY-iPr"/>
                         </constraints>
@@ -93,6 +121,9 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="0YR-Ay-kKb">
+            <size key="intrinsicContentSize" width="147" height="40"/>
+        </designable>
         <designable name="iaG-mJ-fiy">
             <size key="intrinsicContentSize" width="130" height="40"/>
         </designable>

@@ -10,18 +10,20 @@ import UIKit
 
 class Alert {
     
-    var titulo: String
-    var mensagem: String
+    var title: String
+    var message: String
+    var action: String
     
-    init(titulo: String, mensagem: String) {
-        self.titulo = titulo
-        self.mensagem = mensagem
+    init(title: String, message: String, action: String) {
+        self.title = title
+        self.message = message
+        self.action = action
     }
     
     func getAlert() -> UIAlertController {
-        let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
-        let  acaoCancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-        alerta.addAction(acaoCancelar)
-        return alerta
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let  actionCancel = UIAlertAction(title: action, style: .cancel, handler: nil)
+        alert.addAction(actionCancel)
+        return alert
     }
 }
