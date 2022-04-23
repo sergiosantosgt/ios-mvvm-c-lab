@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, Storyboarded {
+class LoginViewController: UIViewController, Storyboarded, UITextFieldDelegate {
     
     
     @IBOutlet weak var email: LocalizedTextField!
@@ -19,12 +19,28 @@ class LoginViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureDismissKeyboard()
 
         loginButton.isEnabled = false
+        self.email.delegate = self
+        self.password.delegate = self
     }
     
     @IBAction func loginAction(_ sender: Any) {
+        login()
+    }
+    
+    @IBAction func registerAction(_ sender: Any) {
         
+        viewModel?.doRegister()
+        
+    }
+    
+    @IBAction func textFieldChanged(_ sender: Any) {
+        validateLoginFields()
+    }
+    
+    private func login() {
         updateLoginFormState(onLoginState: false)
         
         viewModel?.doLogin(email: self.email.text!, password: self.password.text!, completion: { (success) in
@@ -38,14 +54,20 @@ class LoginViewController: UIViewController, Storyboarded {
         })
     }
     
-    @IBAction func registerAction(_ sender: Any) {
-        
-        viewModel?.doRegister()
-        
+    internal func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        //textField code
+
+        textField.resignFirstResponder()  //if desired
+        performTextFieldAction()
+        return true
     }
-    
-    @IBAction func textFieldChanged(_ sender: Any) {
-        validateLoginFields()
+
+    private func performTextFieldAction() {
+        Logger.info("Press Go")
+        if loginButton.isEnabled {
+            login()
+        }
     }
     
     private func validateLoginFields() {
