@@ -15,7 +15,7 @@ class LocalizedTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        layer.borderWidth = 0.8
+        layer.borderWidth = 0.6
         layer.borderColor = Constants.lightColor.cgColor
         layer.cornerRadius = 5
         

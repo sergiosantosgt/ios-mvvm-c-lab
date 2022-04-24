@@ -28,11 +28,11 @@ class LoginViewModel {
         firebaseService.autenticate(email: email, password: password, completion: { (user, error) in
             if error == nil {
                 if user == nil {
-                    print("USER Login Error")
+                    Logger.error("USER Login Error")
                     completion(false)
                 } else {
                     completion(true)
-                    print("USER Login Success \(String(describing: user?.user.uid))")
+                    Logger.info("USER Login Success \(String(describing: user?.user.uid))")
                     self.didTapLogin.accept?(())
                 }
             } else {
