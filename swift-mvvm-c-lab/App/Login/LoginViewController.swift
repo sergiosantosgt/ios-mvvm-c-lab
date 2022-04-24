@@ -9,10 +9,10 @@ import UIKit
 
 class LoginViewController: UIViewController, Storyboarded, UITextFieldDelegate {
     
-    
     @IBOutlet weak var email: LocalizedTextField!
     @IBOutlet weak var password: LocalizedTextField!
     @IBOutlet weak var loginButton: ButtonWithProgress!
+    @IBOutlet weak var registerButton: ButtonWithProgress!
     
     static var storyboard = AppStoryboard.login
     var viewModel: LoginViewModel?
@@ -20,10 +20,7 @@ class LoginViewController: UIViewController, Storyboarded, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDismissKeyboard()
-
-        loginButton.isEnabled = false
-        self.email.delegate = self
-        self.password.delegate = self
+        setUpLayout()
     }
     
     @IBAction func loginAction(_ sender: Any) {
@@ -38,6 +35,18 @@ class LoginViewController: UIViewController, Storyboarded, UITextFieldDelegate {
     
     @IBAction func textFieldChanged(_ sender: Any) {
         validateLoginFields()
+    }
+    
+    private func setUpLayout() {
+        loginButton.isEnabled = false
+        self.email.delegate = self
+        self.password.delegate = self
+        navigationItem.title = Constants.loginTitle
+        registerButton.setCustomColor(color: Constants.lightColor)
+        
+//        let me = UIBarButtonItem(title: "Register", style: .done, target: self, action: #selector(registerAction))
+//        navigationItem.rightBarButtonItem = me
+//        navigationController?.navigationBar.barTintColor = .white
     }
     
     private func login() {

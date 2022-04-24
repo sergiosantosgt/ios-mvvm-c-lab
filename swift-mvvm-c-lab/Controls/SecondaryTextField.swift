@@ -1,23 +1,19 @@
 //
-//  LocalizedTextField.swift
+//  SecondaryTextField.swift
 //  swift-mvvm-c-lab
 //
-//  Created by Sergio Santos on 13/04/22.
+//  Created by Sergio Santos on 24/04/22.
 //
 
 import Foundation
 import UIKit
 
-class LocalizedTextField: UITextField {
+class SecondaryTextField: UITextField {
     @IBInspectable var placeholderLocalizationKey: String?
     @IBInspectable var upperText: Bool = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        layer.borderWidth = 0.8
-        layer.borderColor = Constants.lightColor.cgColor
-        layer.cornerRadius = 5
         
         if (placeholder?.hasNonEmptyValue() ?? false) && placeholderLocalizationKey == nil {
             assertionFailure("Translation key not set for \(text ?? "")")
@@ -27,4 +23,3 @@ class LocalizedTextField: UITextField {
             : placeholderLocalizationKey?.localizedCapitalized ?? placeholder
     }
 }
-

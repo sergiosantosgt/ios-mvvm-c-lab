@@ -15,6 +15,7 @@ class LoginViewModel {
     
     let didTapLogin = DelegateView<Void>()
     let didTapRegister = DelegateView<Void>()
+    let viewDidDisappear = DelegateView<Void>()
     
     init(sessionService: SessionService) {
         self.sessionService = sessionService

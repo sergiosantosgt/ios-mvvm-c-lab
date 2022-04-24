@@ -10,6 +10,9 @@ import UIKit
 
 @IBDesignable
 class FancyButton: UIButton {
+    
+    public var fancyButtonColor: UIColor = Constants.mainColor
+    
     @IBInspectable var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
@@ -63,7 +66,7 @@ class FancyButton: UIButton {
     }
     
     var highlightedColor: UIColor {
-        return Constants.mainColor
+        return fancyButtonColor
     }
     
     override func awakeFromNib() {
@@ -79,7 +82,7 @@ class FancyButton: UIButton {
     private func setUpView() {
         cornerRadius = 10
         borderWidth = 1
-        borderColor = tintColor
+        borderColor = fancyButtonColor
         
         setTitleColor(UIColor.white, for: .highlighted)
         alpha = isEnabled ? 1.0 : 0.3
@@ -92,6 +95,12 @@ class FancyButton: UIButton {
         backgroundColor = isHighlighted
             ? highlightedColor
             : UIColor.clear
+    }
+    
+    public func setCustomColor(color: UIColor) {
+        fancyButtonColor = color
+        borderColor = color
+        setTitleColor(color, for: .normal)
     }
 }
 

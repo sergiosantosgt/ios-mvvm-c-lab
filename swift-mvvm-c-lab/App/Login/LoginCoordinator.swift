@@ -18,8 +18,8 @@ class LoginCoordinator: BaseCoordinator {
         let viewController = LoginViewController.instantiate()
         viewController.viewModel = viewModel
         
-        navigationController.isNavigationBarHidden = true
-        navigationController.viewControllers = [viewController]
+        navigationController.isNavigationBarHidden = false
+        self.navigationController.viewControllers = [viewController]
     }
     
     private func setupBinding() {
@@ -29,6 +29,10 @@ class LoginCoordinator: BaseCoordinator {
         
         viewModel.didTapRegister.subscribe(to: self) { this, _ in
             this.showRegister()
+        }
+        
+        viewModel.viewDidDisappear.subscribe(to: self) { this, _ in
+            this.parentCoordinator?.didFinish(coordinator: this)
         }
     }
     

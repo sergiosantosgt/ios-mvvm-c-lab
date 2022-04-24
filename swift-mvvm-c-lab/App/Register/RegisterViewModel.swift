@@ -10,5 +10,5 @@ import RxSwift
 import FirebaseAuth
 
 class RegisterViewModel {
-    
+    let viewDidDisapear = DelegateView<Void>()
 }
