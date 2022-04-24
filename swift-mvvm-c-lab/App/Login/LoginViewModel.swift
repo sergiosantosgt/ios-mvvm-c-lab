@@ -7,7 +7,6 @@
 
 import Foundation
 import RxSwift
-import FirebaseAuth
 
 class LoginViewModel {
     private let sessionService: SessionService

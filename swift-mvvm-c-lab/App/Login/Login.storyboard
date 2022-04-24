@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaG-mJ-fiy" customClass="ButtonWithProgress" customModule="swift_mvvm_c_lab" customModuleProvider="target">
-                                <rect key="frame" x="117" y="505" width="180" height="40"/>
+                                <rect key="frame" x="117" y="413" width="180" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
                                 <constraints>
@@ -27,7 +27,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="9" maxX="40" maxY="9"/>
-                                <state key="normal" title="SignIn">
+                                <state key="normal" title="Entrar">
                                     <color key="titleColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -38,9 +38,12 @@
                                     <action selector="loginAction:" destination="S8A-py-EGt" eventType="touchUpInside" id="GVX-7j-BXe"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8d-VQ-dtq" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
-                                <rect key="frame" x="60" y="431" width="294" height="34"/>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y8d-VQ-dtq" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="60" y="335" width="294" height="38"/>
                                 <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="b0l-ot-RyI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -51,14 +54,17 @@
                                 </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-icon" translatesAutoresizingMaskIntoConstraints="NO" id="SDU-WH-ZCs">
-                                <rect key="frame" x="143" y="184" width="128" height="128"/>
+                                <rect key="frame" x="143" y="94" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="K32-NH-t7e"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u9m-yM-hv7" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
-                                <rect key="frame" x="60" y="372" width="294" height="34"/>
+                                <rect key="frame" x="60" y="272" width="294" height="38"/>
                                 <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="wQN-Sk-tFz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
@@ -69,7 +75,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0YR-Ay-kKb" customClass="ButtonWithProgress" customModule="swift_mvvm_c_lab" customModuleProvider="target">
-                                <rect key="frame" x="117" y="565" width="180" height="40"/>
+                                <rect key="frame" x="117" y="473" width="180" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
                                 <constraints>
@@ -78,7 +84,7 @@
                                 </constraints>
                                 <color key="tintColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="9" maxX="40" maxY="9"/>
-                                <state key="normal" title="Register">
+                                <state key="normal" title="Cadastro">
                                     <color key="titleColor" systemColor="systemGrayColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -97,7 +103,7 @@
                             <constraint firstItem="iaG-mJ-fiy" firstAttribute="centerX" secondItem="xJB-re-6eH" secondAttribute="centerX" id="AW2-ql-dZy"/>
                             <constraint firstItem="u9m-yM-hv7" firstAttribute="leading" secondItem="gsK-gW-6AP" secondAttribute="leading" constant="60" id="AZk-2d-83d"/>
                             <constraint firstItem="SDU-WH-ZCs" firstAttribute="centerX" secondItem="xJB-re-6eH" secondAttribute="centerX" id="Er1-Bc-PtG"/>
-                            <constraint firstItem="SDU-WH-ZCs" firstAttribute="top" secondItem="gsK-gW-6AP" secondAttribute="top" constant="140" id="KTm-Mj-G9w"/>
+                            <constraint firstItem="SDU-WH-ZCs" firstAttribute="top" secondItem="gsK-gW-6AP" secondAttribute="top" constant="50" id="KTm-Mj-G9w"/>
                             <constraint firstItem="iaG-mJ-fiy" firstAttribute="top" secondItem="Y8d-VQ-dtq" secondAttribute="bottom" constant="40" id="Tx6-8X-otZ"/>
                             <constraint firstItem="Y8d-VQ-dtq" firstAttribute="leading" secondItem="gsK-gW-6AP" secondAttribute="leading" constant="60" id="bh4-dh-0FG"/>
                             <constraint firstItem="gsK-gW-6AP" firstAttribute="trailing" secondItem="u9m-yM-hv7" secondAttribute="trailing" constant="60" id="ct0-ku-ZcL"/>
@@ -105,7 +111,7 @@
                             <constraint firstItem="SDU-WH-ZCs" firstAttribute="leading" secondItem="gsK-gW-6AP" secondAttribute="leading" constant="143" id="jjS-H6-uK5"/>
                             <constraint firstItem="Y8d-VQ-dtq" firstAttribute="top" secondItem="u9m-yM-hv7" secondAttribute="bottom" constant="25" id="mOE-2K-QfS"/>
                             <constraint firstItem="0YR-Ay-kKb" firstAttribute="centerX" secondItem="xJB-re-6eH" secondAttribute="centerX" id="sJN-AP-8DA"/>
-                            <constraint firstItem="u9m-yM-hv7" firstAttribute="top" secondItem="SDU-WH-ZCs" secondAttribute="bottom" constant="60" id="vaZ-aK-oil"/>
+                            <constraint firstItem="u9m-yM-hv7" firstAttribute="top" secondItem="SDU-WH-ZCs" secondAttribute="bottom" constant="50" id="vaZ-aK-oil"/>
                             <constraint firstItem="gsK-gW-6AP" firstAttribute="trailing" secondItem="Y8d-VQ-dtq" secondAttribute="trailing" constant="60" id="zkb-wY-iPr"/>
                         </constraints>
                     </view>
@@ -123,10 +129,10 @@
     </scenes>
     <designables>
         <designable name="0YR-Ay-kKb">
-            <size key="intrinsicContentSize" width="147" height="40"/>
+            <size key="intrinsicContentSize" width="154" height="40"/>
         </designable>
         <designable name="iaG-mJ-fiy">
-            <size key="intrinsicContentSize" width="130" height="40"/>
+            <size key="intrinsicContentSize" width="129" height="40"/>
         </designable>
     </designables>
     <resources>

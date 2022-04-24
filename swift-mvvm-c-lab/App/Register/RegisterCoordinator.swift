@@ -21,8 +21,19 @@ class RegisterCoordinator: BaseCoordinator {
     }
     
     private func setupBinding() {
+        viewModel.didTapRegister.subscribe(to: self) { this, _ in
+            this.showHome()
+        }
+        
         viewModel.viewDidDisapear.subscribe(to: self) { this, _ in
             this.parentCoordinator?.didFinish(coordinator: this)
         }
+    }
+    
+    private func showHome() {
+        removeChildCoordinators()
+        let coordinator = AppDelegate.container.resolve(HomeCoordinator.self)!
+        coordinator.navigationController = navigationController
+        start(coordinator: coordinator)
     }
 }

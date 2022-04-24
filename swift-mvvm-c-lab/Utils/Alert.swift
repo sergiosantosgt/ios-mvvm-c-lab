@@ -12,18 +12,20 @@ class Alert {
     
     var title: String
     var message: String
-    var action: String
+    var actionTitle: String
     
-    init(title: String, message: String, action: String) {
+    init(title: String, message: String, actionTitle: String) {
         self.title = title
         self.message = message
-        self.action = action
+        self.actionTitle = actionTitle
     }
     
-    func getAlert() -> UIAlertController {
+    func getAlert(actionCancel: Bool = true) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let  actionCancel = UIAlertAction(title: action, style: .cancel, handler: nil)
-        alert.addAction(actionCancel)
+        if(actionCancel) {
+            let action = UIAlertAction(title: actionTitle, style: .cancel, handler: nil)
+            alert.addAction(action)
+        }
         return alert
     }
 }

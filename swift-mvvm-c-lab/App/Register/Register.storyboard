@@ -16,15 +16,145 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zdH-2g-H7g" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="60" y="84" width="294" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="3zg-5a-iEL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizationKey" value="Email"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldChaged:" destination="Y6W-OH-hqX" eventType="editingChanged" id="qVt-cr-6rb"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l0H-Q3-bYD" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="60" y="142" width="294" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="noU-DO-X89"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizationKey" value="Name"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldChaged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="2JN-Eu-FuB"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XzS-cY-Egh" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="60" y="258" width="294" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="JfN-ne-J1e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizationKey" value="Password"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldChaged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="zVe-FL-xfE"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmação de senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-SP-lhY" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="60" y="316" width="294" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="passwordTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="snN-TP-JQG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizationKey" value="PasswordConfirmation"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldChaged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="lZi-hD-oZZ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwJ-pa-W6l" customClass="ButtonWithProgress" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="117" y="384" width="180" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" identifier="loginButton"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="3IC-7X-k4d"/>
+                                    <constraint firstAttribute="height" constant="40" id="m4b-zd-OIR"/>
+                                </constraints>
+                                <color key="tintColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="9" maxX="40" maxY="9"/>
+                                <state key="normal" title="Cadastrar">
+                                    <color key="titleColor" red="0.081568567960000005" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="Register"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="upperText" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="register:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2D3-Wz-82y"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Sobrenome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lu8-FR-9NA" customClass="LocalizedTextField" customModule="swift_mvvm_c_lab" customModuleProvider="target">
+                                <rect key="frame" x="60" y="200" width="294" height="38"/>
+                                <accessibility key="accessibilityConfiguration" identifier="emailTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="tkL-Ig-GhP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderLocalizationKey" value="Surname"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="textFieldChaged:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="qpl-qZ-eS9"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zdH-2g-H7g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="40" id="2KH-kg-jZx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zdH-2g-H7g" secondAttribute="trailing" constant="60" id="3Fe-6d-FP4"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XzS-cY-Egh" secondAttribute="trailing" constant="60" id="6QI-Ig-DGA"/>
+                            <constraint firstItem="XzS-cY-Egh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="7mi-o0-E4g"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lu8-FR-9NA" secondAttribute="trailing" constant="60" id="CJl-1y-3Jx"/>
+                            <constraint firstItem="P2a-SP-lhY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="Eha-b3-Lbg"/>
+                            <constraint firstItem="lu8-FR-9NA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="KtS-CR-aFF"/>
+                            <constraint firstItem="zdH-2g-H7g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="TTr-0p-Pf9"/>
+                            <constraint firstItem="P2a-SP-lhY" firstAttribute="top" secondItem="XzS-cY-Egh" secondAttribute="bottom" constant="20" id="WMD-Jn-c05"/>
+                            <constraint firstItem="dwJ-pa-W6l" firstAttribute="top" secondItem="P2a-SP-lhY" secondAttribute="bottom" constant="30" id="WTv-a7-akz"/>
+                            <constraint firstItem="l0H-Q3-bYD" firstAttribute="top" secondItem="zdH-2g-H7g" secondAttribute="bottom" constant="20" id="ZCe-aT-miV"/>
+                            <constraint firstItem="lu8-FR-9NA" firstAttribute="top" secondItem="l0H-Q3-bYD" secondAttribute="bottom" constant="20" id="aV7-9N-sZy"/>
+                            <constraint firstItem="XzS-cY-Egh" firstAttribute="top" secondItem="lu8-FR-9NA" secondAttribute="bottom" constant="20" id="b5o-cX-hgW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="l0H-Q3-bYD" secondAttribute="trailing" constant="60" id="fkM-pg-ZDJ"/>
+                            <constraint firstItem="dwJ-pa-W6l" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gW8-fJ-Laq"/>
+                            <constraint firstItem="l0H-Q3-bYD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="60" id="sf0-zF-YRd"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P2a-SP-lhY" secondAttribute="trailing" constant="60" id="uXH-eZ-euW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="zdH-2g-H7g" id="vFG-0j-3rU"/>
+                        <outlet property="name" destination="l0H-Q3-bYD" id="E2U-2V-5K3"/>
+                        <outlet property="password" destination="XzS-cY-Egh" id="ax2-Lr-nXD"/>
+                        <outlet property="passwordConfirmation" destination="P2a-SP-lhY" id="tCw-sV-UF8"/>
+                        <outlet property="registerButton" destination="dwJ-pa-W6l" id="NKc-br-YtS"/>
+                        <outlet property="surname" destination="lu8-FR-9NA" id="uZu-3Q-9pS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="93"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="dwJ-pa-W6l">
+            <size key="intrinsicContentSize" width="159" height="40"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

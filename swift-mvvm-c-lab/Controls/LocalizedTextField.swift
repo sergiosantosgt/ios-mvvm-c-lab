@@ -23,8 +23,7 @@ class LocalizedTextField: UITextField {
             assertionFailure("Translation key not set for \(text ?? "")")
         }
         placeholder = upperText
-            ? placeholderLocalizationKey?.localizedUppercase ?? placeholder
-            : placeholderLocalizationKey?.localizedCapitalized ?? placeholder
+        ? placeholder?.uppercased() ?? placeholder
+        : placeholder?.capitalized ?? placeholder
     }
 }
-

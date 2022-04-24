@@ -8,8 +8,16 @@
 import Foundation
 
 class Validator {
-    func validate(text: String, with rules: [Rule]) -> String? {
+    public func validate(text: String, with rules: [Rule]) -> String? {
         return rules.compactMap({ $0.check(text) }).first
+    }
+    
+    public func checkConfirmation(password: String, passwordConfirmation: String) -> Bool {
+        var confirmation: Bool = false
+        if password == passwordConfirmation {
+            confirmation = true
+        }
+        return confirmation
     }
 
 //    func validate(input: InputView, with rules: [Rule]) {

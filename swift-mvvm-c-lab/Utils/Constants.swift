@@ -17,6 +17,13 @@ enum Constants {
     // MARK: - Messages
     static let authFailTitle: String = "Falha ao autenticar"
     static let authFailMsg: String = "Falha ao realizar a autenticação, por favor, tente novamente."
+    static let registerFailTitle: String = "Falha ao cadastrar"
+    static let checkField: String = "Verifique o campo"
+    static let registerValidationFailMsg: String = "Não foi possível prosseguir com o cadastro."
+    static let registerFailMsg: String = "Falha ao realizar o cadastro, verifique os campos e tente novamente."
+    static let registerSuccessMsg: String = "Cadastro realizado com sucesso."
     static let cancelMsg: String = "Cancelar"
     static let loginTitle: String = "Login"
+    static let registerTitle: String = "Cadastro"
+    static let proceedMsg: String = "Prosseguir"
 }

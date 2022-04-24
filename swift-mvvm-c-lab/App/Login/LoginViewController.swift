@@ -50,15 +50,17 @@ class LoginViewController: UIViewController, Storyboarded, UITextFieldDelegate {
     }
     
     private func login() {
-        updateLoginFormState(onLoginState: false)
+        updateLoginFormState(onExecutionState: false)
         
         viewModel?.doLogin(email: self.email.text!, password: self.password.text!, completion: { (success) in
             if(!success) {
-                let alert = Alert(title: Constants.authFailTitle, message: Constants.authFailMsg, action: Constants.cancelMsg)
-                self.present(alert.getAlert(), animated: true, completion: nil)
+                let alert = Alert(title: Constants.authFailTitle, message: Constants.authFailMsg, actionTitle: Constants.cancelMsg)
+                self.present(alert.getAlert(), animated: true, completion: {
+                    Logger.error("Login error")
+                })
             }
             
-            self.updateLoginFormState(onLoginState: true)
+            self.updateLoginFormState(onExecutionState: true)
             
         })
     }
@@ -89,8 +91,8 @@ class LoginViewController: UIViewController, Storyboarded, UITextFieldDelegate {
         }
     }
     
-    private func updateLoginFormState(onLoginState: Bool) {
-        if onLoginState {
+    private func updateLoginFormState(onExecutionState: Bool) {
+        if onExecutionState {
             self.email.isEnabled = true
             self.password.isEnabled = true
             self.loginButton.isInProgress = false
